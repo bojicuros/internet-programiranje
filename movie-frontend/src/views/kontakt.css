@@ -1,0 +1,493 @@
+.kontakt-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--dl-color-uros-a);
+}
+.kontakt-header {
+  width: 100%;
+  height: 85.6953125px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.kontakt-logo-and-menu {
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  max-width: auto;
+  align-items: center;
+  padding-top: var(--dl-space-space-doubleunit);
+  padding-right: 4px;
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-doubleunit);
+  justify-content: space-between;
+  background-color: var(--dl-color-uros-v);
+}
+.kontakt-container1 {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.kontakt-logo {
+  top: 29px;
+  left: 61px;
+  color: var(--dl-color-uros-a);
+  position: absolute;
+  align-self: flex-end;
+}
+.kontakt-right-side {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kontakt-links-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(236, 237, 242, 0.81);
+}
+.kontakt-text {
+  color: var(--dl-color-uros-a);
+  transition: 0.3s;
+  margin-right: var(--dl-space-space-doubleunit);
+  border-radius: var(--dl-radius-radius-radius4);
+  text-decoration: none;
+}
+.kontakt-text:hover {
+  background-color: rgba(7, 5, 53, 0.37);
+}
+.kontakt-text:active {
+  background-color: rgba(255, 160, 58, 0.57);
+}
+.kontakt-navlink {
+  color: var(--dl-color-uros-a);
+  transition: 0.3s;
+  margin-right: var(--dl-space-space-doubleunit);
+  border-radius: var(--dl-radius-radius-radius4);
+  text-decoration: none;
+}
+.kontakt-navlink:hover {
+  background-color: rgba(7, 5, 53, 0.37);
+}
+.kontakt-navlink:active {
+  background-color: rgba(255, 160, 58, 0.57);
+}
+.kontakt-navlink1 {
+  color: var(--dl-color-uros-a);
+  transition: 0.3s;
+  margin-right: var(--dl-space-space-doubleunit);
+  border-radius: var(--dl-radius-radius-radius4);
+  text-decoration: none;
+}
+.kontakt-navlink1:hover {
+  background-color: rgba(7, 5, 53, 0.37);
+}
+.kontakt-navlink1:active {
+  background-color: rgba(255, 160, 58, 0.57);
+}
+.kontakt-navlink2 {
+  color: var(--dl-color-uros-a);
+  transition: 0.3s;
+  margin-right: var(--dl-space-space-doubleunit);
+  border-radius: var(--dl-radius-radius-radius4);
+  text-decoration: none;
+}
+.kontakt-navlink2:hover {
+  background-color: rgba(7, 5, 53, 0.37);
+}
+.kontakt-navlink2:active {
+  background-color: rgba(255, 160, 58, 0.57);
+}
+.kontakt-tablet-menu {
+  display: none;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kontakt-tablet-menu {
+  width: 24px;
+  height: 24px;
+}
+.kontakt-mobile-menu {
+  top: 0px;
+  flex: 0 0 auto;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: var(--dl-space-space-doubleunit);
+  z-index: 100;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.kontakt-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.kontakt-top {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-doubleunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kontakt-close-menu {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.kontakt-icon03 {
+  width: 24px;
+  height: 24px;
+}
+.kontakt-right-side1 {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kontakt-links-container1 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kontakt-text01 {
+  margin-bottom: 8px;
+}
+.kontakt-text02 {
+  margin-bottom: 8px;
+}
+.kontakt-text03 {
+  margin-bottom: 8px;
+}
+.kontakt-link {
+  display: contents;
+}
+.kontakt-follow-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kontakt-text05 {
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+.kontakt-icons-container {
+  width: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kontakt-link1 {
+  display: contents;
+}
+.kontakt-icon05 {
+  width: 24px;
+  height: 24px;
+}
+.kontakt-link2 {
+  display: contents;
+}
+.kontakt-icon07 {
+  width: 24px;
+  height: 24px;
+}
+.kontakt-link3 {
+  display: contents;
+}
+.kontakt-icon09 {
+  width: 24px;
+  height: 24px;
+}
+.kontakt-info {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.kontakt-poruka {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt-text06 {
+  color: var(--dl-color-uros-v);
+  font-size: 26px;
+  margin-top: var(--dl-space-space-tripleunit);
+  text-align: center;
+}
+.kontakt-text07 {
+  text-align: right;
+}
+.kontakt-text08 {
+  text-align: right;
+}
+.kontakt-text10 {
+  text-align: center;
+}
+.kontakt-unos {
+  display: flex;
+  align-self: center;
+  margin-top: var(--dl-space-space-doubleunit);
+  align-items: center;
+  margin-bottom: var(--dl-space-space-unit);
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt-ime {
+  color: var(--dl-color-uros-a);
+  font-size: 24px;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: left;
+  margin-bottom: var(--dl-space-space-halfunit);
+  background-color: var(--dl-color-uros-v);
+}
+.kontakt-vas-email {
+  color: var(--dl-color-uros-a);
+  font-size: 24px;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: left;
+  margin-bottom: var(--dl-space-space-halfunit);
+  background-color: var(--dl-color-uros-v);
+}
+.kontakt-vasa-poruka {
+  color: var(--dl-color-uros-a);
+  font-size: 24px;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: left;
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-tripleunit);
+  background-color: var(--dl-color-uros-v);
+}
+.kontakt-posalji {
+  color: var(--dl-color-uros-v);
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-uros-c);
+}
+.kontakt-kontakt {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  flex-direction: column;
+}
+.kontakt-text11 {
+  color: var(--dl-color-uros-v);
+  font-size: 26px;
+  margin-top: var(--dl-space-space-tripleunit);
+  text-align: center;
+}
+.kontakt-text12 {
+  text-align: right;
+}
+.kontakt-text13 {
+  text-align: right;
+}
+.kontakt-container2 {
+  width: 60%;
+  display: flex;
+  margin-top: var(--dl-space-space-doubleunit);
+  align-items: center;
+  margin-left: 15%;
+  flex-direction: column;
+}
+.kontakt-telefon {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.kontakt-icon11 {
+  fill: var(--dl-color-uros-v);
+  width: 50px;
+  height: 50px;
+}
+.kontakt-container3 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-doubleunit);
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt-text14 {
+  color: var(--dl-color-uros-v);
+  font-size: 18px;
+}
+.kontakt-text15 {
+  color: var(--dl-color-uros-v);
+}
+.kontakt-email {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.kontakt-icon13 {
+  fill: var(--dl-color-uros-v);
+  width: 50px;
+  height: 50px;
+}
+.kontakt-container4 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-doubleunit);
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt-text16 {
+  color: var(--dl-color-uros-v);
+  font-size: 18px;
+}
+.kontakt-text17 {
+  color: var(--dl-color-uros-v);
+}
+.kontakt-drustvene-mreze {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.kontakt-icon15 {
+  fill: var(--dl-color-uros-v);
+  width: 50px;
+  height: 50px;
+}
+.kontakt-container5 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-doubleunit);
+  flex-direction: column;
+  justify-content: center;
+}
+.kontakt-text18 {
+  color: var(--dl-color-uros-v);
+  font-size: 18px;
+}
+.kontakt-icons-container1 {
+  width: 100px;
+  display: flex;
+  margin-top: var(--dl-space-space-halfunit);
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kontakt-link4 {
+  display: contents;
+}
+.kontakt-icon17 {
+  fill: var(--dl-color-gray-white);
+  width: 24px;
+  height: 24px;
+}
+.kontakt-link5 {
+  display: contents;
+}
+.kontakt-icon19 {
+  fill: var(--dl-color-gray-white);
+  width: 24px;
+  height: 24px;
+}
+.kontakt-link6 {
+  display: contents;
+}
+.kontakt-icon21 {
+  fill: var(--dl-color-gray-white);
+  width: 24px;
+  height: 24px;
+}
+.kontakt-adresa {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.kontakt-text19 {
+  color: var(--dl-color-uros-v);
+  font-size: 26px;
+  margin-top: var(--dl-space-space-doubleunit);
+  text-align: center;
+  margin-left: var(--dl-space-space-tripleunit);
+}
+.kontakt-text20 {
+  text-align: right;
+}
+.kontakt-text21 {
+  color: var(--dl-color-uros-v);
+  margin-left: var(--dl-space-space-quadruple);
+  padding-left: var(--dl-space-space-unit);
+}
+.kontakt-image {
+  width: 90%;
+  margin-top: var(--dl-space-space-unit);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-quadruple);
+  border-radius: var(--dl-radius-radius-radius4);
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+@media(max-width: 991px) {
+  .kontakt-logo {
+    top: 32px;
+    left: 58px;
+  }
+}
+@media(max-width: 767px) {
+  .kontakt-right-side {
+    display: none;
+  }
+  .kontakt-tablet-menu {
+    display: flex;
+  }
+}
