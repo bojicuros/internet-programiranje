@@ -9,7 +9,7 @@ import './login.css'
 
 const Login = () => {
 
-  const { auth, setAuth } = useAuth();
+  const { setAuth } = useAuth();
   const [name, setName] = useState(null);
   const [lastname, setLastName] = useState(null);
   const [gender, setGender] = useState(null);
@@ -63,12 +63,14 @@ const Login = () => {
     })
       .then((data) => {
         setAuth({ data })
-      }).catch(error => {
-        console.log('request failed', error);
+        alert("Uspjesno ste prijavljeni")
         document.getElementsByClassName("login-button")[0].value = '';
         document.getElementsByClassName("login-input")[0].value = '';
         setEmail(null);
         setPassword(null);
+      }).catch(error => {
+        alert("Pogresno ste unijeli email ili lozinku")
+        console.log('request failed', error);
       });
   }
 

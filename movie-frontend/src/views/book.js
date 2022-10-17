@@ -50,7 +50,6 @@ const Book = () => {
   }
 
   const confirm = () => {
-
     fetch('http://localhost:8080/projection/' + id)
       .then(res => {
         return res.json();
@@ -435,9 +434,7 @@ const Book = () => {
           <span className="book-text16">Izabrano sjediste</span>
           <button className="book-button130 button"></button>
         </div>
-        <button onClick={() => (confirm())} type="submit" className="book-potvrdi button">
-          POTVRDI
-        </button>
+        <Link onClick={()=>(confirm())} to="/profile" className='book-potvrdi button'>POTVRDI</Link>
       </div>
       <div className="book-footer">
         <div className="book-menu">

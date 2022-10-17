@@ -364,11 +364,15 @@
 }
 .movies-image {
   width: 250px;
-  height: 300px;
+  height: 330px;
   object-fit: cover;
-  border-radius: var(--dl-radius-radius-radius4);
+  border-radius: 10px;
   border-top-left-radius: var(--dl-radius-radius-radius8);
   border-top-right-radius: var(--dl-radius-radius-radius8);
+}
+.movies-image:hover {
+  opacity:0.5;
+  filter: alpha(opacity=50);
 }
 .movies-container2 {
   width: 100%;
@@ -378,6 +382,7 @@
   flex-direction: column;
 }
 .movies-text16 {
+  text-align: center;
   color: #f9f9f9;
   font-size: 20px;
   font-style: normal;
@@ -389,14 +394,6 @@
 }
 .movies-component1 {
   text-decoration: none;
-}
-.movies-image1 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: var(--dl-radius-radius-radius4);
-  border-top-left-radius: var(--dl-radius-radius-radius8);
-  border-top-right-radius: var(--dl-radius-radius-radius8);
 }
 .movies-container3 {
   width: 100%;
@@ -419,14 +416,6 @@
   margin-right: var(--dl-space-space-halfunit);
   flex-direction: column;
 }
-.movies-image2 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: var(--dl-radius-radius-radius4);
-  border-top-left-radius: var(--dl-radius-radius-radius8);
-  border-top-right-radius: var(--dl-radius-radius-radius8);
-}
 .movies-container4 {
   width: 100%;
   display: flex;
@@ -448,14 +437,6 @@
   margin-right: var(--dl-space-space-halfunit);
   flex-direction: column;
 }
-.movies-image3 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: var(--dl-radius-radius-radius4);
-  border-top-left-radius: var(--dl-radius-radius-radius8);
-  border-top-right-radius: var(--dl-radius-radius-radius8);
-}
 .movies-container5 {
   width: 100%;
   display: flex;
@@ -471,19 +452,18 @@
   padding-bottom: var(--dl-space-space-halfunit);
 }
 .movies-sljedece {
-  right: 93px;
+  right: 0px;
   bottom: 20px;
   position: fixed;
-  border-radius: 40%;
-}
-.movies-text20 {
-  border-radius: 50%;
+  height: 70px;
+  width: 140px;
 }
 .movies-prethodno {
-  left: 60px;
+  left: 0px;
   bottom: 20px;
   position: fixed;
-  border-radius: 40%;
+  height: 70px;
+  width: 140px;
 }
 .movies-text23 {
   border-radius: 50%;

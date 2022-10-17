@@ -51,7 +51,9 @@ const Home = () => {
           </div>
           <div className="home-right-side">
             <div className="home-links-container">
-              <span className="home-text">Pocetna</span>
+              <Link to="/" className="home-navlink">
+                Pocetna
+              </Link>
               <Link to="/movies" className="home-navlink">
                 Filmovi
               </Link>

@@ -386,8 +386,8 @@
   margin-top: 0px;
   align-items: center;
   margin-left: 0px;
-  margin-right: var(--dl-space-space-unit);
-  padding-right: var(--dl-space-space-doubleunit);
+  margin-right: var(--dl-space-space-tripleunit);
+  padding-right: var(--dl-space-space-tripleunit);
   flex-direction: column;
   justify-content: space-between;
 }

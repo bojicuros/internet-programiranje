@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 
 import { Helmet } from 'react-helmet'
@@ -270,7 +270,7 @@ const Profile = () => {
         <div className="profile-container3">
           <span className="profile-text10">
             <span>Vase rezervacije:</span>
-            <button onClick={()=>(logOut())} className='button profile-odjavi'>Odjavi se</button>
+            <Link onClick={()=>(logOut())} to="/" className='button profile-odjavi'>Odjavi se</Link>
             <span></span>
           </span>
           {tickets && tickets.map((ticket) => (

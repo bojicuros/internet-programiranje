@@ -10,6 +10,8 @@ import './movies.css'
 const Movies = () => {
 
   const [movies, setMovies] = useState(null);
+  const [firstIndex, setFirstIndex] = useState(0);
+  const [lastIndex, setLastIndex] = useState(4);
 
   useEffect(() => {
      fetch('http://localhost:8080'+window.location.pathname)
@@ -19,7 +21,29 @@ const Movies = () => {
      .then((data) => {
         setMovies(data);
      })
-  }, []);
+  });
+
+  const nextMovies = () => {
+    if(movies.length>firstIndex+4){
+      setFirstIndex(firstIndex+4)
+      setLastIndex(lastIndex+4)
+    }else{
+      setFirstIndex(0)
+      setLastIndex(4)
+    }
+  }
+
+  const previousMovies = () => {
+    if(firstIndex-4>-1){
+      setFirstIndex(firstIndex-4)
+      setLastIndex(lastIndex-4)
+      console.log('i',firstIndex,lastIndex)
+    }else{
+      setLastIndex(movies.length%4===0 ? movies.length : movies.length+4-movies.length%4)
+      setFirstIndex(movies.length%4===0 ? movies.length-4 : movies.length-movies.length%4)
+      console.log('e',firstIndex,lastIndex)
+    }
+  }
 
   return (
     <div className="movies-container">
@@ -65,7 +89,7 @@ const Movies = () => {
           <div data-type="MobileMenu" className="movies-mobile-menu">
             <div className="movies-nav">
               <div className="movies-top">
-                <h1>Travel</h1>
+                <h1>Movie Booking App</h1>
                 <div data-type="CloseMobileMenu" className="movies-close-menu">
                   <svg viewBox="0 0 1024 1024" className="movies-icon03">
                     <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
@@ -74,9 +98,9 @@ const Movies = () => {
               </div>
               <div className="movies-right-side1">
                 <div className="movies-links-container1">
-                  <span className="movies-text01">Home</span>
-                  <span className="movies-text02">About</span>
-                  <span className="movies-text03">Tour Packages</span>
+                  <span className="movies-text01">Pocetna</span>
+                  <span className="movies-text02">Kontakt</span>
+                  <span className="movies-text03">Filmovi</span>
                   <span>Contact</span>
                 </div>
                 <a href="#main-section" className="movies-link">
@@ -172,35 +196,33 @@ const Movies = () => {
         </Link>
       </div>
       <div className="movies-filmovi">
-          {movies && movies.map((movie)=>(
+          {movies && movies.slice(firstIndex,lastIndex).map((movie)=>(
               <div className="movies-film3">
-              <img
-                alt="image"
-                src={movie.img}
-                className="movies-image"
-              />
+                <Link to={"/movie/"+movie.movieId}>
+                  <img
+                    alt="image"
+                    src={movie.img}
+                    className="movies-image"
+                  />
+              </Link>
               <div className="movies-container2">
                 <span className="movies-text16">{movie.movieName}</span>
-                  <div class="outline-button-container">
-                    <Link to={"/movie/"+movie.movieId} class="outline-button-button button">
-                      Saznaj vise
-                    </Link>
-                  </div>
               </div>
             </div>
             ))}
       </div>
-      <button className="movies-sljedece button">
-        <span className="movies-text20 content">
-          <span>Sljedeci</span>
-          <span></span>
-        </span>
-      </button>
-      <button className="movies-prethodno button">
-        <span className="movies-text23 content">
-          <span>Prethodni</span>
-        </span>
-      </button>
+        <img
+            alt="image"
+            src="/playground_assets/arrow_right.png"
+            className='movies-sljedece'
+            onClick={()=>nextMovies()}
+        />
+        <img
+            alt="image"
+            src="/playground_assets/arrow_left.png"
+            className='movies-prethodno'
+            onClick={()=>previousMovies()}
+        />
     </div>
   )
 }

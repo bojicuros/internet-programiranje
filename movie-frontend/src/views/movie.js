@@ -8,22 +8,23 @@ import './movie.css'
 
 const Movie = () => {
 
-  const [today, setToday] = useState(new Date());
+  const [today] = useState(new Date());
   const [day, setDay] = useState(today.getDay());
-  const [dateFormat, setDateFormat] = useState(today.toISOString().split('T')[0]);
+  // const [dateFormat, setDateFormat] = useState(today.toISOString().split('T')[0]);
 
   const [movie, setMovie] = useState(null);
   const [projections, setProjections] = useState(null);
 
   const changeDate = (number) => {
-    if(day === 0 && number === 7 || day === number)
+    if((day === 0 && number === 7) || day === number)
       today.setDate(today.getDate());
     else if(day === 0)
       today.setDate(today.getDate() + (number-7));
     else
       today.setDate(today.getDate() + (number-day));
     setDay(today.getDay());
-    setDateFormat(today.toISOString().split('T')[0]);
+    console.log(today)
+    // setDateFormat(today.toISOString().split('T')[0]);
   }
 
   useEffect(() => {
@@ -38,6 +39,7 @@ const Movie = () => {
 
   useEffect(() => {
     if(movie !== null){
+      let dateFormat = today.toISOString().split('T')[0]
       fetch('http://localhost:8080/projections/'+movie.movieId+'/'+dateFormat)
       .then(res => {
         return res.json();
@@ -168,7 +170,7 @@ const Movie = () => {
       {movie && (<div className="movie-film-prikaz">
         <div className="movie-podaci-o-filmu">
          <div className="movie-slika-i-naziv">
-            <h1 className="movie-naziv-filma">Ime filma: {movie.movieName}</h1>
+            <h1 className="movie-naziv-filma">{movie.movieName}</h1>
             <img
               alt="image"
               src={movie.img}
@@ -206,7 +208,7 @@ const Movie = () => {
         </div>
         <div className="movie-dani">
           <button onClick={()=>(changeDate(1))} className={day === 1 ? "movie-text17 movie-ponedeljak" : "movie-text16 movie-ponedeljak"}>
-            <span>Ponedeljak</span>
+            <span>Ponedjeljak</span>
           </button>
           <button onClick={()=>(changeDate(2))} className={day === 2 ? "movie-text17 movie-utorak" : "movie-text16 movie-utorak"}>
             <span>Utorak</span>
@@ -224,14 +226,14 @@ const Movie = () => {
             <span>Subota</span>
           </button>
           <button onClick={()=>(changeDate(7))} className={day === 0 ? "movie-text17 movie-nedelja" : "movie-text16 movie-nedelja"}>
-            <span>Nedelja</span>
+            <span>Nedjelja</span>
           </button>
         </div>
         <div className="movie-satnice">
-        {projections && projections.map((projection)=>(
+        {projections && projections.sort(function(a,b){return a.projectionId-b.projectionId}).map((projection)=>(
           <Link class="movie-navlink3" to={"/book/"+projection.projectionId}>
             <span>{projection.time.substring(0,5)}</span><br></br>
-            <span className='movie-text40'>{projection.price+'KM'}</span>
+            <span className='movie-text40'>{projection.price+' KM'}</span>
           </Link>
         ))}
         </div>
